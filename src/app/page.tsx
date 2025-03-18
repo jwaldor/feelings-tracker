@@ -1,9 +1,11 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { RedirectIfAuthenticated } from "@/components/auth/RedirectIfAuthenticated"
 
 export default function WelcomePage() {
   return (
     <div className="flex min-h-screen flex-col">
+      <RedirectIfAuthenticated />
       <header className="px-4 lg:px-6 h-14 flex items-center">
         <Link className="flex items-center justify-center" href="/">
           <span className="font-bold text-xl">Feelings Tracker</span>
@@ -48,7 +50,7 @@ export default function WelcomePage() {
                 <div className="flex flex-col space-y-2">
                   <h3 className="text-xl font-bold">Track Daily</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Record how you're feeling each day with a simple interface.
+                    Record how you&apos;re feeling each day with a simple interface.
                   </p>
                 </div>
               </div>
