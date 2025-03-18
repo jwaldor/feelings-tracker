@@ -8,7 +8,7 @@ export default clerkMiddleware(
     (async () => {
       const authobj = await auth();
       if (authobj.userId) {
-        fetch(`/api/initializeUser`, {
+        fetch(`${req.nextUrl.origin}/api/initializeUser`, {
           method: "POST",
           body: JSON.stringify({ userId: authobj.userId }),
         });
