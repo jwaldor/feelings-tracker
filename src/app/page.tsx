@@ -14,7 +14,7 @@ export default function WelcomePage() {
           <Link href="/login" className="text-sm font-medium hover:underline underline-offset-4">
             Log In
           </Link>
-          <Link href="/signup" className="text-sm font-medium hover:underline underline-offset-4">
+          <Link href="/sign-up" className="text-sm font-medium hover:underline underline-offset-4">
             Sign Up
           </Link>
         </nav>
@@ -34,7 +34,7 @@ export default function WelcomePage() {
               </div>
               <div className="space-x-4">
                 <Button asChild size="lg">
-                  <Link href="/signup">Get Started</Link>
+                  <Link href="/sign-up">Get Started</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link href="/login">Sign In</Link>
