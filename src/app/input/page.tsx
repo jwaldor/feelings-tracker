@@ -28,19 +28,19 @@ export default function FeelingInputPage() {
         </nav>
       </header>
       <main className="flex-1 flex items-center justify-center p-4 md:p-8">
-        <Card className="w-full max-w-md">
+        <Card className="w-full max-w-none h-full">
           <CardHeader>
             <CardTitle className="text-2xl">How are you feeling?</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="space-y-2">
-              <Textarea
-                className="min-h-[100px]"
-                value={feeling}
-                onChange={(e) => setFeeling(e.target.value)}
-                placeholder="Write about how you're feeling..."
-              />
-            </div>
+          <CardContent className="flex-1">
+            <Textarea
+              className="min-h-[calc(100vh-250px)] w-full resize-none border-none focus-visible:ring-0 focus-visible:ring-offset-0"
+              value={feeling}
+              onChange={(e) => setFeeling(e.target.value)}
+              placeholder="Write about how you're feeling..."
+              autoFocus
+              onBlur={(e) => e.target.focus()}
+            />
           </CardContent>
           <CardFooter className="flex justify-between">
             <Button
@@ -54,7 +54,7 @@ export default function FeelingInputPage() {
               onClick={handleSave}
               disabled={!feeling.trim() || isSaving}
             >
-              {isSaving ? "Saving..." : "Save Entry"}
+              {isSaving ? "Saving..." : "Submit Entry"}
             </Button>
           </CardFooter>
         </Card>
